@@ -1,7 +1,7 @@
-﻿[General]
+[General]
 RunMode=Normal
 runType=FileSystem
-resultsFilename=C:\VIP\Demos\Github\UFTDemo2\Results\Blank_20251002_131024.html
+resultsFilename=C:\\VIP\\Demos\\Github\\UFTDemo2\\Results\\Blank_20251002_132342.html
 
 [Test1]
 Test1=C:\VIP\Demos\Github\UFTDemo2\uft-one-tests\Blank

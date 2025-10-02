@@ -1,7 +1,7 @@
-﻿[General]
+[General]
 RunMode=Normal
 runType=FileSystem
-resultsFilename=C:\VIP\Demos\Github\UFTDemo2\Results\AdvantageOnlineLogin_20251002_131021.html
+resultsFilename=C:\\VIP\\Demos\\Github\\UFTDemo2\\Results\\AdvantageOnlineLogin_20251002_132341.html
 
 [Test1]
 Test1=C:\VIP\Demos\Github\UFTDemo2\uft-one-tests\AdvantageOnlineLogin
