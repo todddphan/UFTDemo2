@@ -1,0 +1,7 @@
+[General]
+RunMode=Normal
+runType=FileSystem
+resultsFilename=.\\Results\\Tests_Run\\TestRun1.html
+
+[Test1]
+Test1=C:\\VIP\\Demos\\Github\\UFTDemo2\\uft-one-tests
