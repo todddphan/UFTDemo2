@@ -36,7 +36,7 @@ runType=FileSystem
 resultsFilename=$resultsFile_Fwd
 
 [Test1]
-Test1=$testPath_Fwd
+TestPath=$testPath_Fwd
 "@
 
     # Save the parameter file with explicit ASCII encoding

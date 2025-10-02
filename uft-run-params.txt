@@ -1,3 +1,0 @@
-[General]
-RunMode=Normal
-runType=FileSystem
