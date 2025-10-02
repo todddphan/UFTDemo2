@@ -14,7 +14,7 @@ jobs:
       - name: Run all UFT Tests using PowerShell script
         run: |
           echo "Running all UFT tests under uft-one-tests folder"
-          powershell -ExecutionPolicy Bypass -File "${{ github.workspace }}\\run-uft-tests.ps1"
+          powershell -ExecutionPolicy Bypass -File "${{ github.workspace }}\\run-uft-tests-with-paramfile.ps1"
         shell: powerShell
 
       - name: Upload Test Results
