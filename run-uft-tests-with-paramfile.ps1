@@ -1,11 +1,11 @@
 
 $testRoot = "C:\VIP\Demos\Github\UFTDemo2\uft-one-tests"
 $resultsRoot = "C:\VIP\Demos\Github\UFTDemo2\Results"
-$paramFolder = "$resultsRoot\TempParams"
+$tempParamsRoot = "C:\VIP\Demos\Github\UFTDemo2\TempParams"
 
-# Create the parameter folder if it doesn't exist
-if (!(Test-Path -Path $paramFolder)) {
-    New-Item -ItemType Directory -Path $paramFolder | Out-Null
+# Create TempParams folder if it doesn't exist
+if (!(Test-Path -Path $tempParamsRoot)) {
+    New-Item -ItemType Directory -Path $tempParamsRoot | Out-Null
 }
 
 # Loop through each test folder
@@ -14,9 +14,9 @@ Get-ChildItem -Path $testRoot -Directory | ForEach-Object {
     $testPath = $_.FullName
     $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
     $resultsFile = "$resultsRoot\$testName`_$timestamp.html"
-    $paramFile = "$paramFolder\params_$testName.txt"
+    $paramFile = "$tempParamsRoot\$testName`_params.txt"
 
-    # Create the parameter file content
+    # Create parameter file content
     $paramContent = @"
 [General]
 RunMode=Normal
@@ -24,13 +24,12 @@ runType=FileSystem
 resultsFilename=$resultsFile
 
 [Test1]
-TestPath=$testPath
+Test1=$testPath
 "@
 
-    # Save the parameter file
-    $paramContent | Set-Content -Path $paramFile -Encoding UTF8
+    # Write parameter file
+    $paramContent | Out-File -FilePath $paramFile -Encoding UTF8
 
     # Run FTToolsLauncher with the parameter file
-    Write-Host "Running test: $testName"
     & "C:\Tools\FTToolsLauncher\FTToolsLauncher.exe" -paramfile $paramFile
 }
